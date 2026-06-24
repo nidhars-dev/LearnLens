@@ -14,6 +14,7 @@ embedded_chunks = embedder.embed(chunks)
 print(f"Total chunks: {len(chunks)}")
 print(f"Total embedded chunks: {len(embedded_chunks)}")
 
+print(f"Chunk ID: {chunks[0].chunk_id}")
 print(f"First embedded chunk text: {embedded_chunks[0].chunk.text}")
 print(f"First embedded chunk page number: {embedded_chunks[0].chunk.page_number}")
 print(f"First embedded chunk source file: {embedded_chunks[0].chunk.source_file}")
