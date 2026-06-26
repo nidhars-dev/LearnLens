@@ -24,3 +24,13 @@ class Embedder:
             embedded_chunks.append(embedded_chunk)
 
         return embedded_chunks
+    
+    def embed_query(
+            self,
+            text : str
+        ) -> list[float]:
+        response = embed(
+            model = 'nomic-embed-text', 
+            input = text)
+        return response.embeddings[0]
+    
